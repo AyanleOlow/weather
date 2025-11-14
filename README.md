@@ -35,4 +35,4 @@ Users can enter any city and view real-time weather information including:
 1. Clone the repository:
 
 ```bash
-git clone YOUR_REPO_URL_HERE
+https://github.com/AyanleOlow/weather.git
