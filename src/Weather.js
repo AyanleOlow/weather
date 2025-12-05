@@ -19,8 +19,11 @@ const Weather = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    
+    <div className="screen" style={{ textAlign: "center", marginTop: "50px" }}>
+      
       <h1>Weather App</h1>
+      <div className="box"> 
       <input
         type="text"
         placeholder="Enter city"
@@ -28,11 +31,15 @@ const Weather = () => {
         onChange={(e) => setCity(e.target.value)}
       />
       <button onClick={getWeather}>Search</button>
-
+      </div>
       {weather && (
         <div className="weatherContainer">
           <h2 className="TITTLE">{weather.name}</h2>
-          <p className="Temperature">Temperature: {weather.main.temp}°C</p>
+           <img
+    src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+    alt={weather.weather[0].description}
+  />
+          <p className="Temperature"> Temperature: {weather.main.temp}°C</p>
           <p className="Weather">Weather: {weather.weather[0].description}</p>
           <p className="Temperature">humidity: {weather.main.humidity}%</p>
           

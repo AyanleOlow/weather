@@ -1,13 +1,31 @@
 body{
   background-image: url(../public/sky2.jpg);
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .weatherContainer{
   justify-content: center;
+  align-items: center;
   border: solid;
   background-color: gray;
   width: 30vw;
-  height: 50vh;
+  height: 60vh;
+  backdrop-filter: blur(8px);
 }
 
+@media (max-width:450px){
+  .weatherContainer{
+    width: 70vw;
+  }
+}
+
+.box{
+  display: flex;
+}
+.screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
